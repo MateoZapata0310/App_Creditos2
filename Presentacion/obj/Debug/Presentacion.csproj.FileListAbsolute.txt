@@ -1,0 +1,17 @@
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\bin\Debug\Negocio.dll
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\bin\Debug\Negocio.pdb
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.FrmLogin.resources
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.FrmCliente.resources
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\bin\Debug\Datos.dll
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\bin\Debug\Datos.pdb
+C:\Users\mateo\source\repos\App_Creditos\Presentacion\obj\Debug\Presentacion.FrmPrincipal.resources

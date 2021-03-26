@@ -1,0 +1,6 @@
+C:\Users\mateo\source\repos\App_Creditos\Datos\bin\Debug\Datos.dll
+C:\Users\mateo\source\repos\App_Creditos\Datos\bin\Debug\Datos.pdb
+C:\Users\mateo\source\repos\App_Creditos\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\mateo\source\repos\App_Creditos\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\mateo\source\repos\App_Creditos\Datos\obj\Debug\Datos.dll
+C:\Users\mateo\source\repos\App_Creditos\Datos\obj\Debug\Datos.pdb

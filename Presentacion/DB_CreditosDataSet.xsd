@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DB_CreditosDataSet" targetNamespace="http://tempuri.org/DB_CreditosDataSet.xsd" xmlns:mstns="http://tempuri.org/DB_CreditosDataSet.xsd" xmlns="http://tempuri.org/DB_CreditosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=DESKTOP-R3AHI75\SQLSERVER2020;Initial Catalog=DB_Creditos;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="desktop-r3ahi75\sqlserver2020.DB_Creditos.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TblCredencialesTableAdapter" GeneratorDataComponentClassName="TblCredencialesTableAdapter" Name="TblCredenciales" UserDataComponentName="TblCredencialesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="desktop-r3ahi75\sqlserver2020.DB_Creditos.dbo" DbObjectName="DB_Creditos.dbo.TblCredenciales" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PKCorreo FROM dbo.TblCredenciales</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PKCorreo" DataSetColumn="PKCorreo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DB_CreditosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DB_CreditosDataSet" msprop:Generator_UserDSName="DB_CreditosDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TblCredenciales" msprop:Generator_TableClassName="TblCredencialesDataTable" msprop:Generator_TableVarName="tableTblCredenciales" msprop:Generator_TablePropName="TblCredenciales" msprop:Generator_RowDeletingName="TblCredencialesRowDeleting" msprop:Generator_RowChangingName="TblCredencialesRowChanging" msprop:Generator_RowEvHandlerName="TblCredencialesRowChangeEventHandler" msprop:Generator_RowDeletedName="TblCredencialesRowDeleted" msprop:Generator_UserTableName="TblCredenciales" msprop:Generator_RowChangedName="TblCredencialesRowChanged" msprop:Generator_RowEvArgName="TblCredencialesRowChangeEvent" msprop:Generator_RowClassName="TblCredencialesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PKCorreo" msprop:Generator_ColumnVarNameInTable="columnPKCorreo" msprop:Generator_ColumnPropNameInRow="PKCorreo" msprop:Generator_ColumnPropNameInTable="PKCorreoColumn" msprop:Generator_UserColumnName="PKCorreo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
