@@ -91,6 +91,7 @@ namespace Presentacion
             this.tblEstadoCivilTableAdapter = new Presentacion.DB_CreditosDataSet1TableAdapters.TblEstadoCivilTableAdapter();
             this.tblSexoTableAdapter = new Presentacion.DB_CreditosDataSet2TableAdapters.TblSexoTableAdapter();
             this.LbMensaje = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -652,14 +653,15 @@ namespace Presentacion
             // 
             this.nuevoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(207, 36);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.nuevoToolStripMenuItem.Text = "&Nuevo";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(207, 36);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.guardarToolStripMenuItem.Text = "&Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
@@ -667,14 +669,15 @@ namespace Presentacion
             // 
             this.actualizarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(207, 36);
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.actualizarToolStripMenuItem.Text = "&Actualizar";
+            this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(207, 36);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -707,12 +710,24 @@ namespace Presentacion
             this.LbMensaje.TabIndex = 59;
             this.LbMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.lblMensaje.Location = new System.Drawing.Point(34, 729);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(25, 29);
+            this.lblMensaje.TabIndex = 59;
+            this.lblMensaje.Text = "..";
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(869, 774);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.LbMensaje);
             this.Controls.Add(this.BtnEnter);
             this.Controls.Add(this.BtnSupr);
@@ -853,5 +868,6 @@ namespace Presentacion
         private System.Windows.Forms.BindingSource tblSexoBindingSource;
         private DB_CreditosDataSet2TableAdapters.TblSexoTableAdapter tblSexoTableAdapter;
         private System.Windows.Forms.Label LbMensaje;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }
