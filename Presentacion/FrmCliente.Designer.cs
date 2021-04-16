@@ -196,6 +196,7 @@ namespace Presentacion
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 38);
             this.panel3.TabIndex = 31;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label2
             // 
@@ -653,7 +654,7 @@ namespace Presentacion
             // 
             this.nuevoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(207, 36);
             this.nuevoToolStripMenuItem.Text = "&Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -661,7 +662,7 @@ namespace Presentacion
             // 
             this.guardarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(207, 36);
             this.guardarToolStripMenuItem.Text = "&Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
@@ -669,7 +670,7 @@ namespace Presentacion
             // 
             this.actualizarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(207, 36);
             this.actualizarToolStripMenuItem.Text = "&Actualizar";
             this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
@@ -677,7 +678,7 @@ namespace Presentacion
             // 
             this.salirToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(207, 36);
             this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
