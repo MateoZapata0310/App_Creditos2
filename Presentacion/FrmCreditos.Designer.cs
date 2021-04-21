@@ -33,7 +33,7 @@ namespace Presentacion
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LbModulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.LbUsuario = new System.Windows.Forms.Label();
@@ -41,8 +41,7 @@ namespace Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.LblFechaPago = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.LblDiaPago = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.LblMonto = new System.Windows.Forms.Label();
@@ -69,6 +68,8 @@ namespace Presentacion
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.TxtDiaPago = new System.Windows.Forms.TextBox();
+            this.LbMensaje = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -89,44 +90,44 @@ namespace Presentacion
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
             this.panel1.Controls.Add(this.LblUsuario);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.LbModulo);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1201, 123);
+            this.panel1.Size = new System.Drawing.Size(1136, 123);
             this.panel1.TabIndex = 1;
             // 
             // LblUsuario
             // 
             this.LblUsuario.AutoSize = true;
-            this.LblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblUsuario.Location = new System.Drawing.Point(664, 72);
+            this.LblUsuario.Location = new System.Drawing.Point(680, 74);
             this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(72, 20);
+            this.LblUsuario.Size = new System.Drawing.Size(121, 32);
             this.LblUsuario.TabIndex = 2;
             this.LblUsuario.Text = "Usuario:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(586, 72);
+            this.label2.Location = new System.Drawing.Point(572, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.Size = new System.Drawing.Size(102, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Usuario:";
             // 
-            // label1
+            // LbModulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(20, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 44);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Modulo - Creditos";
+            this.LbModulo.AutoSize = true;
+            this.LbModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbModulo.ForeColor = System.Drawing.SystemColors.Window;
+            this.LbModulo.Location = new System.Drawing.Point(20, 37);
+            this.LbModulo.Name = "LbModulo";
+            this.LbModulo.Size = new System.Drawing.Size(320, 44);
+            this.LbModulo.TabIndex = 0;
+            this.LbModulo.Text = "Modulo - Creditos";
             // 
             // panel2
             // 
@@ -189,6 +190,7 @@ namespace Presentacion
             this.TxtNombre.Location = new System.Drawing.Point(413, 208);
             this.TxtNombre.MaxLength = 300;
             this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.ReadOnly = true;
             this.TxtNombre.Size = new System.Drawing.Size(707, 34);
             this.TxtNombre.TabIndex = 32;
             this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
@@ -196,31 +198,22 @@ namespace Presentacion
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel4.Controls.Add(this.LblFechaPago);
+            this.panel4.Controls.Add(this.LblDiaPago);
             this.panel4.Location = new System.Drawing.Point(38, 283);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(360, 38);
             this.panel4.TabIndex = 21;
             // 
-            // LblFechaPago
+            // LblDiaPago
             // 
-            this.LblFechaPago.AutoSize = true;
-            this.LblFechaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFechaPago.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblFechaPago.Location = new System.Drawing.Point(30, 8);
-            this.LblFechaPago.Name = "LblFechaPago";
-            this.LblFechaPago.Size = new System.Drawing.Size(145, 25);
-            this.LblFechaPago.TabIndex = 0;
-            this.LblFechaPago.Text = "Fecha de Pago";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(38, 318);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(360, 34);
-            this.dateTimePicker1.TabIndex = 34;
+            this.LblDiaPago.AutoSize = true;
+            this.LblDiaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDiaPago.ForeColor = System.Drawing.SystemColors.Window;
+            this.LblDiaPago.Location = new System.Drawing.Point(30, 8);
+            this.LblDiaPago.Name = "LblDiaPago";
+            this.LblDiaPago.Size = new System.Drawing.Size(119, 25);
+            this.LblDiaPago.TabIndex = 0;
+            this.LblDiaPago.Text = "Dia de Pago";
             // 
             // panel5
             // 
@@ -276,6 +269,8 @@ namespace Presentacion
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(360, 34);
             this.TxtId.TabIndex = 19;
+            this.TxtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtId_KeyPress);
+            this.TxtId.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtId_KeyUp);
             // 
             // dB_CreditosDataSet3
             // 
@@ -445,6 +440,7 @@ namespace Presentacion
             this.BtnGuardar.TabIndex = 42;
             this.BtnGuardar.Text = "&Guardar Credito";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnCancelar
             // 
@@ -459,19 +455,41 @@ namespace Presentacion
             // BtnSalir
             // 
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Location = new System.Drawing.Point(27, 483);
+            this.BtnSalir.Location = new System.Drawing.Point(38, 483);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(371, 44);
+            this.BtnSalir.Size = new System.Drawing.Size(360, 44);
             this.BtnSalir.TabIndex = 44;
             this.BtnSalir.Text = "&Salir";
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
+            // TxtDiaPago
+            // 
+            this.TxtDiaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDiaPago.Location = new System.Drawing.Point(38, 321);
+            this.TxtDiaPago.MaxLength = 2;
+            this.TxtDiaPago.Name = "TxtDiaPago";
+            this.TxtDiaPago.Size = new System.Drawing.Size(360, 34);
+            this.TxtDiaPago.TabIndex = 45;
+            this.TxtDiaPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtFechaPago_KeyPress);
+            // 
+            // LbMensaje
+            // 
+            this.LbMensaje.AutoSize = true;
+            this.LbMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbMensaje.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.LbMensaje.Location = new System.Drawing.Point(52, 547);
+            this.LbMensaje.Name = "LbMensaje";
+            this.LbMensaje.Size = new System.Drawing.Size(0, 36);
+            this.LbMensaje.TabIndex = 3;
+            // 
             // FrmCreditos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1202, 732);
+            this.ClientSize = new System.Drawing.Size(1137, 615);
+            this.Controls.Add(this.LbMensaje);
+            this.Controls.Add(this.TxtDiaPago);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnGuardar);
@@ -485,7 +503,6 @@ namespace Presentacion
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.TxtMonto);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.TxtNombre);
@@ -528,15 +545,14 @@ namespace Presentacion
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LbModulo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LbUsuario;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label LblFechaPago;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label LblDiaPago;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label LblMonto;
         private System.Windows.Forms.TextBox TxtMonto;
@@ -564,5 +580,7 @@ namespace Presentacion
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox TxtDiaPago;
+        private System.Windows.Forms.Label LbMensaje;
     }
 }
