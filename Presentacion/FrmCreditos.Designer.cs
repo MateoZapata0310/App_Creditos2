@@ -34,9 +34,6 @@ namespace Presentacion
             this.LblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LbModulo = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.LbUsuario = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
@@ -46,7 +43,6 @@ namespace Presentacion
             this.label8 = new System.Windows.Forms.Label();
             this.LblMonto = new System.Windows.Forms.Label();
             this.TxtMonto = new System.Windows.Forms.TextBox();
-            this.TxtId = new System.Windows.Forms.TextBox();
             this.dB_CreditosDataSet3 = new Presentacion.DB_CreditosDataSet3();
             this.tblPlazoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblPlazoTableAdapter = new Presentacion.DB_CreditosDataSet3TableAdapters.TblPlazoTableAdapter();
@@ -70,8 +66,11 @@ namespace Presentacion
             this.BtnSalir = new System.Windows.Forms.Button();
             this.TxtDiaPago = new System.Windows.Forms.TextBox();
             this.LbMensaje = new System.Windows.Forms.Label();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.LbUsuario = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -83,6 +82,7 @@ namespace Presentacion
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,38 +128,6 @@ namespace Presentacion
             this.LbModulo.Size = new System.Drawing.Size(320, 44);
             this.LbModulo.TabIndex = 0;
             this.LbModulo.Text = "Modulo - Creditos";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.LbUsuario);
-            this.panel2.Location = new System.Drawing.Point(38, 170);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 38);
-            this.panel2.TabIndex = 20;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(232, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 25);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "<ENTER>";
-            // 
-            // LbUsuario
-            // 
-            this.LbUsuario.AutoSize = true;
-            this.LbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.LbUsuario.Location = new System.Drawing.Point(17, 8);
-            this.LbUsuario.Name = "LbUsuario";
-            this.LbUsuario.Size = new System.Drawing.Size(125, 25);
-            this.LbUsuario.TabIndex = 0;
-            this.LbUsuario.Text = "Identificacion";
             // 
             // panel3
             // 
@@ -260,17 +228,6 @@ namespace Presentacion
             this.TxtMonto.TabIndex = 35;
             this.TxtMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMonto_KeyPress);
             this.TxtMonto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtMonto_KeyUp);
-            // 
-            // TxtId
-            // 
-            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.Location = new System.Drawing.Point(38, 208);
-            this.TxtId.MaxLength = 10;
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(360, 34);
-            this.TxtId.TabIndex = 19;
-            this.TxtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtId_KeyPress);
-            this.TxtId.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtId_KeyUp);
             // 
             // dB_CreditosDataSet3
             // 
@@ -434,7 +391,7 @@ namespace Presentacion
             // BtnGuardar
             // 
             this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.Location = new System.Drawing.Point(758, 483);
+            this.BtnGuardar.Location = new System.Drawing.Point(763, 483);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(362, 44);
             this.BtnGuardar.TabIndex = 42;
@@ -483,6 +440,49 @@ namespace Presentacion
             this.LbMensaje.Size = new System.Drawing.Size(0, 36);
             this.LbMensaje.TabIndex = 3;
             // 
+            // TxtId
+            // 
+            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.Location = new System.Drawing.Point(38, 208);
+            this.TxtId.MaxLength = 10;
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(360, 34);
+            this.TxtId.TabIndex = 19;
+            this.TxtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtId_KeyPress);
+            this.TxtId.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtId_KeyUp);
+            // 
+            // LbUsuario
+            // 
+            this.LbUsuario.AutoSize = true;
+            this.LbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.LbUsuario.Location = new System.Drawing.Point(17, 8);
+            this.LbUsuario.Name = "LbUsuario";
+            this.LbUsuario.Size = new System.Drawing.Size(125, 25);
+            this.LbUsuario.TabIndex = 0;
+            this.LbUsuario.Text = "Identificacion";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Window;
+            this.label7.Location = new System.Drawing.Point(232, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 25);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "<ENTER>";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.LbUsuario);
+            this.panel2.Location = new System.Drawing.Point(38, 170);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(360, 38);
+            this.panel2.TabIndex = 20;
+            // 
             // FrmCreditos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -515,8 +515,6 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.FrmCreditos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -535,6 +533,8 @@ namespace Presentacion
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,8 +546,6 @@ namespace Presentacion
         public System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LbModulo;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label LbUsuario;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtNombre;
@@ -556,7 +554,6 @@ namespace Presentacion
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label LblMonto;
         private System.Windows.Forms.TextBox TxtMonto;
-        private System.Windows.Forms.TextBox TxtId;
         private DB_CreditosDataSet3 dB_CreditosDataSet3;
         private System.Windows.Forms.BindingSource tblPlazoBindingSource;
         private DB_CreditosDataSet3TableAdapters.TblPlazoTableAdapter tblPlazoTableAdapter;
@@ -578,9 +575,12 @@ namespace Presentacion
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtDiaPago;
         private System.Windows.Forms.Label LbMensaje;
+        private System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.Label LbUsuario;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel2;
     }
 }

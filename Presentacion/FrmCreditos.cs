@@ -119,6 +119,7 @@ namespace Presentacion
             Fnt_GuardarCreditos(TxtId.Text, TxtDiaPago.Text, TxtMonto.Text, 
                                 CbxPlazo.SelectedIndex, TxtCuota.Text,CbxInteres.SelectedIndex, 
                                 TxtTotalCredito.Text, LblUsuario.Text);
+
         }
     }
 }

@@ -44,5 +44,13 @@ namespace Presentacion
             ObjCreditos.LblUsuario.Text = LblUsuario.Text;
             ObjCreditos.ShowDialog();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            FrmConfiguraciones ObjConfi = new FrmConfiguraciones();
+            ObjConfi.LblUsuario.Text = LblUsuario.Text;
+            ObjConfi.ShowDialog();
+
+        }
     }
 }
