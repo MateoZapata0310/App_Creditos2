@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Negocio;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -20,6 +14,18 @@ namespace Presentacion
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        public void Fnt_CambiarClave()
+        {
+            Cls_Cliente_Negocio ObjCambiarClave = new Cls_Cliente_Negocio();
+            ObjCambiarClave.Fnt_CambiarClave(LblUsuario.Text, TxtClaveN.Text, TxtClaveA.Text, TxtClaveC.Text);
+            LblMensaje.Text = ObjCambiarClave.msn;
+        }
+
+        private void BtnCambiar_Click(object sender, EventArgs e)
+        {
+            Fnt_CambiarClave();
         }
     }
 }

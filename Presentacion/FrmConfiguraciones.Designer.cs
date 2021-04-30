@@ -31,13 +31,14 @@ namespace Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfiguraciones));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LbConfi = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.LbId = new System.Windows.Forms.Label();
-            this.TxtId = new System.Windows.Forms.TextBox();
+            this.LbClaveA = new System.Windows.Forms.Label();
+            this.TxtClaveA = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.LblClave = new System.Windows.Forms.Label();
@@ -45,16 +46,16 @@ namespace Presentacion
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.LblClaveC = new System.Windows.Forms.Label();
-            this.TxtClaveC = new System.Windows.Forms.TextBox();
             this.BtnCambiar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.TxtClaveC = new System.Windows.Forms.TextBox();
+            this.LblMensaje = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,6 +69,17 @@ namespace Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(850, 123);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(780, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(67, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // LblUsuario
             // 
@@ -106,7 +118,7 @@ namespace Presentacion
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGreen;
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.LbId);
+            this.panel2.Controls.Add(this.LbClaveA);
             this.panel2.Location = new System.Drawing.Point(28, 155);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(360, 38);
@@ -123,25 +135,26 @@ namespace Presentacion
             this.label7.TabIndex = 1;
             this.label7.Text = "<ENTER>";
             // 
-            // LbId
+            // LbClaveA
             // 
-            this.LbId.AutoSize = true;
-            this.LbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbId.ForeColor = System.Drawing.SystemColors.Window;
-            this.LbId.Location = new System.Drawing.Point(17, 8);
-            this.LbId.Name = "LbId";
-            this.LbId.Size = new System.Drawing.Size(125, 25);
-            this.LbId.TabIndex = 0;
-            this.LbId.Text = "Identificacion";
+            this.LbClaveA.AutoSize = true;
+            this.LbClaveA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbClaveA.ForeColor = System.Drawing.SystemColors.Window;
+            this.LbClaveA.Location = new System.Drawing.Point(17, 8);
+            this.LbClaveA.Name = "LbClaveA";
+            this.LbClaveA.Size = new System.Drawing.Size(135, 25);
+            this.LbClaveA.TabIndex = 0;
+            this.LbClaveA.Text = "Clave Antigua";
             // 
-            // TxtId
+            // TxtClaveA
             // 
-            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.Location = new System.Drawing.Point(28, 193);
-            this.TxtId.MaxLength = 10;
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(360, 34);
-            this.TxtId.TabIndex = 21;
+            this.TxtClaveA.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtClaveA.Location = new System.Drawing.Point(28, 193);
+            this.TxtClaveA.MaxLength = 10;
+            this.TxtClaveA.Name = "TxtClaveA";
+            this.TxtClaveA.PasswordChar = '®';
+            this.TxtClaveA.Size = new System.Drawing.Size(360, 34);
+            this.TxtClaveA.TabIndex = 21;
             // 
             // panel3
             // 
@@ -181,6 +194,7 @@ namespace Presentacion
             this.TxtClaveN.Location = new System.Drawing.Point(28, 282);
             this.TxtClaveN.MaxLength = 10;
             this.TxtClaveN.Name = "TxtClaveN";
+            this.TxtClaveN.PasswordChar = '®';
             this.TxtClaveN.Size = new System.Drawing.Size(360, 34);
             this.TxtClaveN.TabIndex = 23;
             // 
@@ -216,15 +230,6 @@ namespace Presentacion
             this.LblClaveC.TabIndex = 0;
             this.LblClaveC.Text = "Confirmar de clave";
             // 
-            // TxtClaveC
-            // 
-            this.TxtClaveC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtClaveC.Location = new System.Drawing.Point(28, 377);
-            this.TxtClaveC.MaxLength = 10;
-            this.TxtClaveC.Name = "TxtClaveC";
-            this.TxtClaveC.Size = new System.Drawing.Size(360, 34);
-            this.TxtClaveC.TabIndex = 25;
-            // 
             // BtnCambiar
             // 
             this.BtnCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -234,6 +239,7 @@ namespace Presentacion
             this.BtnCambiar.TabIndex = 43;
             this.BtnCambiar.Text = "&Cambiar Clave";
             this.BtnCambiar.UseVisualStyleBackColor = true;
+            this.BtnCambiar.Click += new System.EventHandler(this.BtnCambiar_Click);
             // 
             // pictureBox1
             // 
@@ -245,22 +251,32 @@ namespace Presentacion
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // TxtClaveC
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(780, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.TxtClaveC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtClaveC.Location = new System.Drawing.Point(28, 377);
+            this.TxtClaveC.MaxLength = 10;
+            this.TxtClaveC.Name = "TxtClaveC";
+            this.TxtClaveC.PasswordChar = '®';
+            this.TxtClaveC.Size = new System.Drawing.Size(360, 34);
+            this.TxtClaveC.TabIndex = 25;
+            // 
+            // LblMensaje
+            // 
+            this.LblMensaje.AutoSize = true;
+            this.LblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMensaje.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.LblMensaje.Location = new System.Drawing.Point(32, 538);
+            this.LblMensaje.Name = "LblMensaje";
+            this.LblMensaje.Size = new System.Drawing.Size(0, 44);
+            this.LblMensaje.TabIndex = 5;
             // 
             // FrmConfiguraciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 630);
+            this.ClientSize = new System.Drawing.Size(847, 601);
+            this.Controls.Add(this.LblMensaje);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnCambiar);
             this.Controls.Add(this.panel4);
@@ -268,7 +284,7 @@ namespace Presentacion
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.TxtClaveN);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.TxtId);
+            this.Controls.Add(this.TxtClaveA);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmConfiguraciones";
@@ -276,6 +292,7 @@ namespace Presentacion
             this.Text = "FrmConfiguraciones";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -283,7 +300,6 @@ namespace Presentacion
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,8 +313,8 @@ namespace Presentacion
         private System.Windows.Forms.Label LbConfi;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label LbId;
-        private System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.Label LbClaveA;
+        private System.Windows.Forms.TextBox TxtClaveA;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LblClave;
@@ -306,9 +322,10 @@ namespace Presentacion
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LblClaveC;
-        private System.Windows.Forms.TextBox TxtClaveC;
         private System.Windows.Forms.Button BtnCambiar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox TxtClaveC;
+        private System.Windows.Forms.Label LblMensaje;
     }
 }

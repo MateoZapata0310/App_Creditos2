@@ -35,7 +35,7 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.LbModulo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LblNombre = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.LblDiaPago = new System.Windows.Forms.Label();
@@ -132,25 +132,26 @@ namespace Presentacion
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.LblNombre);
             this.panel3.Location = new System.Drawing.Point(413, 170);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(707, 38);
             this.panel3.TabIndex = 33;
             // 
-            // label3
+            // LblNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(30, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nombre";
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombre.ForeColor = System.Drawing.SystemColors.Window;
+            this.LblNombre.Location = new System.Drawing.Point(30, 8);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(81, 25);
+            this.LblNombre.TabIndex = 0;
+            this.LblNombre.Text = "Nombre";
             // 
             // TxtNombre
             // 
+            this.TxtNombre.BackColor = System.Drawing.SystemColors.Window;
             this.TxtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -547,7 +548,7 @@ namespace Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LbModulo;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label LblDiaPago;

@@ -9,7 +9,7 @@ namespace Datos
         public ClsConexion objconect_select;
         public SqlDataReader Lectura;              
         public int sw = 0;
-        public String interes, monto2, pos_interes;
+        public String interes, monto2, pos_interes, mensaje = "";
         public Decimal total, cuota2;
 
         public void Fnt_AgregarCliente(
@@ -137,6 +137,27 @@ namespace Datos
             total = Convert.ToDecimal(con.Parameters["@Total"].Value);
             pos_interes = Convert.ToString(con.Parameters["@pos_interes"].Value);
             objconect_select.connection.Close();
+        }
+
+        public void Fnt_CambiarClave(String user, String ClaveN, String ClaveA, String ClaveC)
+        {
+            objconect_select = new ClsConexion();
+            SqlCommand con;
+            con = new SqlCommand("SP_CambiarClave", objconect_select.connection);
+            con.CommandType = CommandType.StoredProcedure;
+            con.Parameters.AddWithValue("@claveA", ClaveA);
+            con.Parameters.AddWithValue("@claveN", ClaveN);
+            con.Parameters.AddWithValue("@claveC", ClaveC);
+            con.Parameters.AddWithValue("@user", user);
+            con.Parameters.AddWithValue("@mensaje", mensaje);
+            con.Parameters["@mensaje"].Direction = ParameterDirection.Output;
+
+            
+            objconect_select.connection.Open();//abre la conexión con el servidor de Base de datos
+            con.ExecuteNonQuery();
+            mensaje = Convert.ToString(con.Parameters["@mensaje"].Value);
+            objconect_select.connection.Close();
+
         }
     }
 }

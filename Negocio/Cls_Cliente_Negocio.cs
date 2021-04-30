@@ -106,5 +106,13 @@ namespace Negocio
             pos = Convert.ToInt32(ObjCalcular.pos_interes);
         }
 
+        public void Fnt_CambiarClave(String user, String ClaveN, String ClaveA, String ClaveC)
+        {
+            Cls_Clientes_Datos ObjCambiarClave = new Cls_Clientes_Datos();
+            ObjCambiarClave.Fnt_CambiarClave(user, ClaveN, ClaveA, ClaveC);
+            msn = ObjCambiarClave.mensaje;
+
+        }
+
     }
 }
